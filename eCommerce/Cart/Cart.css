@@ -387,18 +387,25 @@ header {
   color: #404040 !important;
 }
 
-.sidebar-menu:nth-child(7) ul li:first-child {
+.sidebar-menu:nth-child(7) ul li:nth-child(4) {
   background-color: rgba(130, 49, 211, 0.1);
   border-radius: 0 50px 50px 0;
 }
 
-.sidebar-menu:nth-child(7) ul li:first-child span {
+.sidebar-menu:nth-child(7) ul li:nth-child(4) span {
   color: #8231d3 !important;
+}
+
+.sidebar-menu ul li a:hover span {
+  color: #8231d3 !important;
+  transition: color 0.3s ease;
 }
 
 #main {
   padding: 85px 28px 72px 319px;
 }
+
+/* Page Name */
 
 #title-section {
   display: flex;
