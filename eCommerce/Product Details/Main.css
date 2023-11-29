@@ -315,12 +315,12 @@ header > .navbar-right > ul > li > a > img {
   color: #404040 !important;
 }
 
-.sidebar-menu:nth-child(7) ul li:first-child {
+.sidebar-menu:nth-child(7) ul li:nth-child(2) {
   background-color: rgba(130, 49, 211, 0.1);
   border-radius: 0 50px 50px 0;
 }
 
-.sidebar-menu:nth-child(7) ul li:first-child span {
+.sidebar-menu:nth-child(7) ul:nth-child(2) span {
   color: #8231d3 !important;
 }
 
