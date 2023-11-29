@@ -3,14 +3,27 @@
 @font-face {
   font-family: "Jost";
   font-weight: 500;
-
   src: url(https://fonts.gstatic.com/s/jost/v15/92zatBhPNqw73oTd4g.woff2)
     format("woff2");
+}
+@font-face {
+  font-family: "Jost-Thin";
+  src: url(Fonts/Jost-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Jost-Medium";
+  src: url(Fonts/Jost-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Jost-Light";
+  src: url(Fonts/Jost-Light.ttf) format("truetype");
 }
 
 /* Default Setting */
 
 a,
+label,
+span,
 li,
 h1,
 h2,
@@ -28,8 +41,14 @@ h6 {
 body {
   margin: 0%;
   padding: 0%;
-  background-color: #f7f8fb;
+  background-color: #f4f5f7;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
 }
+
+/* Header Section */
 
 header {
   width: 100%;
@@ -41,10 +60,14 @@ header {
   justify-content: space-between;
 }
 
+/* Left Side of Header */
+
 #navbar-left {
   display: flex;
   align-items: center;
 }
+
+/* Logo Section */
 
 #logo-area {
   height: 100%;
@@ -75,6 +98,8 @@ header {
   width: 19px;
 }
 
+/* Customize Button in Logo Area */
+
 #customize {
   width: 100px;
   height: 30px;
@@ -94,6 +119,8 @@ header {
   margin-right: 8px;
 }
 
+/* Customize Hover Section */
+
 #customize:hover {
   background-color: #f200ff17;
   transition: all 0.3s ease;
@@ -104,12 +131,29 @@ header {
   transition: all 0.3s ease;
 }
 
+/* Right Side of The Header */
+
+#navbar-right {
+  display: flex;
+}
+
+/* Menu Section */
+
 #menu-area {
   display: flex;
   padding-right: 30px;
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+
+#menu-area li {
+  padding: 6px 12.5px;
+  display: inline-block;
+}
+
+#menu-area li:nth-child(7) {
+  padding-right: 0px;
 }
 
 #Search-header {
@@ -120,28 +164,16 @@ header {
   color: #747474;
 }
 
-#menu-area li {
-  padding: 6px 12.5px;
-}
+/* Header Icons */
 
 #massege {
   position: relative;
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: #01B81A;
+  background-color: #01b81a;
   top: 4px;
   left: 16px;
-}
-
-#ball2 {
-  position: relative;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: #FA8B0C;
-  top: 6px;
-  left: 11px;
 }
 
 #flag img {
@@ -160,8 +192,17 @@ header {
 }
 
 #user-image img {
-  width: 33px;
+  width: 32px;
   transition: 0.3s;
+}
+
+#user-toggle span {
+  padding: 0%;
+  padding-left: 7px;
+  margin-bottom: 35px;
+  color: #747474;
+  font-size: 12px;
+  font-weight: 300;
 }
 
 #user-title span {
@@ -172,11 +213,49 @@ header {
   transition: 0.3s;
 }
 
-#menu-area li:nth-child(7) {
-  padding-right: 0px;
+/* Ring Animation */
+
+#ball2 {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #fa8b0c;
+  top: 6px;
+  left: 11px;
 }
 
- 
+/* Notification Icon */
+
+.badge {
+  border-radius: 60px;
+  font-size: 9px;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+}
+
+.version-badge {
+  background-color: rgba(0, 170, 255, 0.1);
+  color: #00aaff;
+  min-width: 20px;
+  height: 18px;
+  padding: 0px 8px;
+  margin-left: 60px;
+}
+
+.green-badge {
+  background-color: #06c21fcf;
+  color: #fff;
+  width: 19px;
+  height: 19px;
+  padding: 0px 0px;
+  margin-left: 120px;
+}
+
 /* Main Adjustment of The Sidebar */
 
 #sidebar {
@@ -321,31 +400,113 @@ header {
   color: #8231d3 !important;
 }
 
-.badge {
-  border-radius: 60px;
-  font-size: 9px;
-  font-weight: 700;
-  text-align: center;
+.sidebar-menu ul li a:hover span {
+  color: #8231d3 !important;
+  transition: color 0.3s ease;
+}
+
+#main {
+  padding: 80px 28px 72px 319px;
+}
+
+/* Page Name */
+
+#title-section {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  text-align: center;
   align-items: center;
-  letter-spacing: 1px;
 }
 
-.version-badge {
-  background-color: rgba(0, 170, 255, 0.1);
-  color: #00aaff;
-  min-width: 20px;
-  height: 18px;
-  padding: 0px 8px;
-  margin-left: 60px;
+#title-left h4 {
+  font-family: Jost-Medium;
+  font-weight: 600;
+  color: #0a0a0ac1;
+  font-size: calc(16.4px + 0.3vw);
+  font-size: 20px;
 }
 
-.green-badge {
-  background-color: #06c21fcf;
-  color: #fff;
-  width: 19px;
-  height: 19px;
-  padding: 0px 0px;
-  margin-left: 120px;
+#title-right {
+  display: flex;
+  align-items: center;
+}
+
+#home-link {
+  padding-bottom: 3px;
+}
+
+#home-link a {
+  font-size: 14px;
+  color: #747474;
+  font-weight: 100;
+  margin-right: 8px;
+  font-family: Jost-Light;
+}
+
+#home-link a span {
+  font-family: Jost-Light;
+  font-weight: 900;
+}
+
+#page-name {
+  display: flex;
+  align-items: center;
+}
+
+#page-name div {
+  margin-right: 8px;
+}
+
+#page-name span {
+  color: #747474;
+  font-weight: 300;
+  font-size: 14px;
+  font-family: Jost-Thin;
+}
+
+#little-circle {
+  height: 4px;
+  width: 4px;
+  background-color: #a0a0a0;
+  border-radius: 50%;
+}
+
+/* Shop Library Section */
+
+#shop-library-container {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer {
+  padding: 28px 0 24px 0;
+  background-color: #fff;
+  width: 100%;
+}
+
+#footer-wrapper {
+  padding-left: 320px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer-left span {
+  font-size: 13px;
+  font-weight: 100;
+}
+
+#footer-left a {
+  font-weight: 100;
+  color: #8231d3;
+  font-size: 13px;
+}
+
+#footer-right a {
+  font-weight: 100;
+  color: #747474;
+  font-size: 13px;
+  margin-right: 25px;
 }
