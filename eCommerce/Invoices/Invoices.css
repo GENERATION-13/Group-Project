@@ -22,6 +22,7 @@
 /* Default Setting */
 
 a,
+p,
 label,
 span,
 li,
@@ -406,7 +407,7 @@ header {
 }
 
 #main {
-  padding: 85px 28px 72px 319px;
+  padding: 85px 28px 30px 319px;
 }
 
 /* Page Name Section */
@@ -466,20 +467,20 @@ header {
 }
 
 #content {
-  width: 80%;
+  width: 90%;
   height: 60% !important;
-  margin: 0 auto;
   background-color: white;
-  padding: 20px 50px;
+  padding: 70px 60px 30px 60px;
+  border-radius: 9px;
 }
+
 #content > .content {
-  width: 100%;
   height: 60%;
 }
 #content > .content > .row {
   width: 100%;
   height: 100%;
-  display: flex;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -492,7 +493,6 @@ header {
   justify-content: center;
   align-items: start;
   justify-content: space-between;
-  margin-bottom: 50px;
 }
 .imag {
   width: 150px;
@@ -500,9 +500,13 @@ header {
 }
 .dec > h5 {
   margin-top: 0;
+  font-family: Jost-Medium;
+  font-weight: 100;
+  font-size: 14px;
 }
 .dec {
   direction: rtl;
+  
 }
 #content > .content > .row > div:nth-child(2) {
   background-color: #f8f9fb;
@@ -511,7 +515,7 @@ header {
   padding: 30px 0;
   border-radius: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -526,6 +530,8 @@ header {
 }
 .barcode > p {
   margin: 0;
+  font-family: Jost-Light;
+  font-size:14px ;
 }
 .invo-to > h2 {
   margin: 0;
@@ -546,16 +552,31 @@ header {
   text-transform: capitalize;
   height: 15px;
 }
-.des > h2 {
+
+.invo-to {
+  padding-right: 60px;
+}
+
+.des {
+  padding-left: 60px;
+}
+
+.des > h4 {
   margin: 0;
   line-height: 1.2777777778;
   font-weight: 600;
   color: var(--color-dark);
   margin-bottom: 5px;
-  font-size: calc(18px + 1.5vw);
+  font-size: 36px;
+  letter-spacing: 2px;
 }
 .des > p {
   font-size: 15px;
+  font-family: Jost-Medium;
+  font-weight: 100;
+  margin: 0%;
+  margin-top: 7px;
+  margin-bottom: 7px;
 }
 .dec > h5 {
   direction: rtl;
@@ -568,19 +589,77 @@ table {
   width: 100%;
 }
 
-td,
-th {
-  text-align: center;
-  padding: 8px;
-  height: 80px;
-}
-th {
-  width: 20% !important;
+#table-text-align th {
+  text-align: left;
 }
 
-td {
-  text-align: center !important;
+#table-text-align td {
+  text-align: left;
 }
+
+.td-body-product-name {
+  text-align: left;
+  display: inline-block;
+  padding-right: 5vw;
+}
+
+.td-body-product-name h5 {
+  font-family: Jost-Light;
+  font-weight: 900;
+  margin: 0%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.td-body-product-detail {
+  display: flex;
+  
+}
+
+.td-body-product-detail p {
+display: flex;
+  margin: 0%;
+
+  margin-right: 9px;
+}
+
+.td-body-product-detail span {
+  margin-right: 7px;
+  font-family: Jost-Light;
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 900;
+  font-family: Jost-Medium;
+
+}
+
+#font {
+  display: flex;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+#font p {
+  font-family: Jost-Light;
+  font-weight: 900;
+  margin: 0% !important;
+  margin-bottom: 20px !important;
+  padding-right: 20px;
+}
+
+th,
+td {
+  width: 20% !important;
+  height: 10px;
+  padding-left: 6%;
+  padding-right: 6%;
+  font-size: 14px;
+  margin: 0px;
+}
+
 tr {
   height: 100px;
   border-bottom: 1px solid #cac8c8;
@@ -605,13 +684,19 @@ tr {
   flex-direction: row;
   justify-content: right;
   align-items: center;
+  text-align: ;
 }
 .btns > a {
   text-decoration: none;
-  margin-left: 10px;
+  margin-left: 13px;
+  font-family: Jost-Light;
+  font-weight: 900;
+  font-size: 14px;
 }
 .btns > a > img {
   vertical-align: middle;
+  width: 14px;
+  margin-right: 5px;
 }
 .btns > a:nth-child(1) {
   text-decoration: none;
@@ -637,7 +722,6 @@ tr {
   text-decoration: none;
   width: 150px;
   line-height: 2.55;
-  height: 45px;
   color: rgb(255, 255, 255);
   background-color: #8231d3;
   border-radius: 50px;
@@ -649,7 +733,7 @@ tr {
   height: 70px !important;
   border: none !important;
 }
-#content > .content > .row > div:nth-child(4) > p:nth-child(5) > span {
+#content > .content > .row > div:nth-child(4) > p:nth-child(4) > span {
   color: #8231d3 !important;
   font-family: sans-serif;
   font-weight: 600;
