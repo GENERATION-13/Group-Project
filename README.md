@@ -1,6 +1,8 @@
-<h1>We don't know the title yet</h1>
+<h1>HexaDash Clone</h1>
 
-Programmers :
+<h3></h3>
+
+<h1>Programmers :</h1>
 
 ● [@N-Pizll](https://www.github.com/N-Pizll)
 <br>
